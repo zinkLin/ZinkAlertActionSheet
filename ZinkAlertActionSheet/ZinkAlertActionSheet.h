@@ -10,17 +10,18 @@
 
 @interface ZinkAlertActionSheet : NSObject
 
-+ (void)zinkAlertWithTitle:(NSString *)title
-                   message:(NSString *)message
-              cancelButton:(NSString *)cancel
-              otherButtons:(NSArray<NSString *> *)buttons
-                  callBack:(void(^)(NSInteger index))callBackBlock;
-
-+ (void)zinkActionSheetShowInView:(UIView *)view
-                        withTitle:(NSString *)title
++ (void)zinkAlertShowInController:(UIViewController *)viewController
+                            title:(NSString *)title
                           message:(NSString *)message
                      cancelButton:(NSString *)cancel
                      otherButtons:(NSArray<NSString *> *)buttons
                          callBack:(void(^)(NSInteger index))callBackBlock;
 
++ (void)zinkActionSheetShowInController:(UIViewController *)viewController
+                                  title:(NSString *)title
+                                message:(NSString *)message
+                           cancelButton:(NSString *)cancel
+                      destructiveButton:(NSString *)destructive
+                           otherButtons:(NSArray<NSString *> *)buttons
+                               callBack:(void(^)(NSInteger index))callBackBlock;
 @end
